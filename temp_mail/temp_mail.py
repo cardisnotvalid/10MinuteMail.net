@@ -1,7 +1,8 @@
+import time
 import json
 import requests
-from typing import List, Dict
 
+from typing import List, Dict
 from temp_mail.types.mail_content import MailContent
 from temp_mail.types.mail_response import MailResponse, MailResponseMailList
 
@@ -43,6 +44,16 @@ class TenMinuteMail:
             print(ex)
             return None
     
+    def wait_for_message(self, timeout: int = 10):
+        timeout_time = 1
+        while timeout > timeout_time:
+            email = self.get_last_email()
+            if email:
+                return email.body[0].body
+            timeout_time += 1
+            time.sleep(1)
+        print("Timed out waiting for message")
+        
     def get_email_address(self) -> MailResponse | None:
         response = self._response()
         return response
@@ -55,10 +66,12 @@ class TenMinuteMail:
         response = self._response()
         return [self.get_email_content(mail_info.mail_id).body for mail_info in response.mail_list]
 
-    def get_last_email(self) -> str:
+    def get_last_email(self) -> MailContent:
         response = self._response()
-        return self.get_email_content(response.mail_list[0].mail_id).body
-
+        mail_id = response.mail_list[0].mail_id
+        if mail_id != "welcome":
+            return self.get_email_content(mail_id)
+    
     def reset_10_minutes(self) -> None:
         url = "https://10minutemail.net/more.html"
         self._session.get(url)
