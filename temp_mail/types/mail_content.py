@@ -17,6 +17,6 @@ class MailContent(BaseModel):
     timestamp:  int = None
     datetime2:  str = None
     urls: List[str] = None
-    body: Union[str, None] = None
+    body: Union[List[MailContentBody], None] = None
     attachment: List[str] = None
     html: List[str] = None
