@@ -4,7 +4,7 @@ Python API Wrapper for [10minutemail.net](https://10minutemail.net) service. 10M
 
 ## Installation
 
-- Installing [Python 3.10](https://www.python.org/downloads/release/python-3100). Don't forget to check the box "Add Python to Path".
+- Installing [Python 3.10](https://www.python.org/downloads/release/python-3100), checking "Add Python to Path".
 - Installing [git](https://git-scm.com/download/win).
 - Installing with pip:
 
