@@ -22,7 +22,7 @@ pip install git+https://github.com/cardisnotvalid/10MinuteMail.net
 pip install git+https://github.com/cardisnotvalid/10MinuteMail.net
 ```
 
-## Общие параметры:
+## General Options:
 
 - `get_email`: Получение полной информации о почте.
 - `get_email_address`: Получение почты.
