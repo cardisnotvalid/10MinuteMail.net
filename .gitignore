@@ -1,2 +1,7 @@
-# Custom
+# Python
 __pycache__/
+
+# Packages
+build
+*.egg
+*.egg-info
