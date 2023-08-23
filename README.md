@@ -26,7 +26,7 @@ pip install git+https://github.com/cardisnotvalid/10MinuteMail.net
 
 - `get_email`: Получение полной информации о почте.
 - `get_email_address`: Получение почты.
-- `get_mailbox`: Получение входящих сообщений.
+- `get_mailbox`: Получение всех входящих сообщений.
 - `wait_for_message`: Ожидание входящей сообщения.
 - `get_message(mail_id)`: Получение сообщения по его ID.
 - `get_last_message`: Получение последнего сообщения.
