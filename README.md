@@ -22,7 +22,7 @@ pip install git+https://github.com/cardisnotvalid/10MinuteMail.net
 pip install git+https://github.com/cardisnotvalid/10MinuteMail.net
 ```
 
-## General Options:
+## Общие параметры:
 
 - `get_email`: Получение полной информации о почте.
 - `get_email_address`: Получение почты.
@@ -36,7 +36,7 @@ pip install git+https://github.com/cardisnotvalid/10MinuteMail.net
 - `generate_new_email_address`: Получение новой почты.
 - `recover_email_address`: Восстановить последнюю почту.
 
-## Sample Code
+## Пример кода:
 
 ```python
 from temp_mail import TempMail
